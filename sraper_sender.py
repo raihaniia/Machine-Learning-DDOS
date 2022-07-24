@@ -29,7 +29,7 @@ if not client.is_user_authorized():
   
 try:
    
-    receiver = InputPeerUser(1370329552, 0)
+    receiver = InputPeerUser(1370XXXXXXX, 0)
  
 
     client.send_message(receiver, message, parse_mode='html')
