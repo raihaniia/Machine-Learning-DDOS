@@ -6,13 +6,13 @@ from telethon import TelegramClient, sync, events
  
 
 
-api_id = '15953907'
-api_hash = 'cb4a2f78514e8c767fdcf139069bb3f1'
-token = '5377807583:AAEspcFJ2nezWCLHTxrVfC7RHv8LGOb0RPo'
+api_id = ''
+api_hash = ''
+token = ''
 message = "WASPADA, Ada Paket Terindikasi Serangan DDoS!!!"
  
 
-phone = '+6285348185165'
+phone = '+628534'
 
 
 client = TelegramClient('session', api_id, api_hash)
