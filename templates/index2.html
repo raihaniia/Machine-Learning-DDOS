@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <title>PREEDIKSI DDoS</title>
+    </head>
+    <body
+        class="
+            flex flex-col
+            justify-between
+            item-center
+            p-8
+            min-h-screen
+            bg-gradient-to-r
+            from-green-400
+            to-blue-500
+            text-gray-800
+            md:flex-row
+        "
+    >
+        <main class="bg-white p-16 rounded-lg">
+            <h1 class="text-3xl font-bold mb-8">
+                Prediksi Benign (Bukan DDoS):
+            </h1>
+
+            <form
+                action="{{ url_for('predict2') }}"
+                method="post"
+                class="flex flex-col"
+            >
+                <label class="mb-2 text-2xl mt-4">Date Time : </label>
+                <input
+                    type="text"
+                    name="dt"
+                    placeholder="Date time"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md text-2xl"
+                    value='0.76473597'
+         
+                   
+                />
+
+
+                <label class="mb-2 text-2xl mt-4">Packet Count :</label>
+                <input
+                    type="text"
+                    name="pktcount"
+                    placeholder="Packet count"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md text-2xl"
+                    value='-1.01026554'
+                />
+                <label class="mb-2 text-2xl mt-4">Byte Count :</label>
+                <input
+                    type="text"
+                    name="bytecount"
+                    placeholder="Byte count"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md text-2xl"
+                    value='-0.78291408'
+                />
+
+                <label class="mb-2 text-2xl mt-4">Packet Per Flow:</label>
+                <input
+                    type="text"
+                    name="pktperflow"
+                    placeholder="Packet per flow"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md text-2xl"
+                    value='-0.85538911'
+                />
+
+                <label class="mb-2 text-2xl mt-4">Byte Per Flow:</label>
+                <input
+                    type="text"
+                    name="byteperflow"
+                    placeholder="Byte per flow"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md text-2xl"
+                    value='-0.6197923'
+                />
+
+                <label class="mb-2 text-2xl mt-4">Packet Rate:</label>
+                <input
+                    type="text"
+                    name="packetrate"
+                    placeholder="Packet rate"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md text-2xl"
+                    value='-0.85321917'
+                />
+
+                <label class="mb-2 text-2xl mt-4">Pair Flow:</label>
+                <input
+                    type="text"
+                    name="pairflow"
+                    placeholder="Pair flow"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md text-2xl"       
+                    value='0.81525384'
+                />
+
+                <label class="mb-2 text-2xl mt-4">Tx kbps:</label>
+                <input
+                    type="text"
+                    name="tx_kbps"
+                    placeholder="Tx kbps"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md text-2xl"
+                    value='-0.41284553'
+                />
+
+                <label class="mb-2 text-2xl mt-4">Rx kbps:</label>
+                <input
+                    type="text"
+                    name="rx_kbps"
+                    placeholder="Rx kbps"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md text-2xl"
+                    value='0.7461851'
+
+                />
+
+                <label class="mb-2 text-2xl mt-4">Total kbps:</label>
+                <input
+                    type="text"
+                    name="tot_kbps"
+                    placeholder="Total kbps"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md text-2xl"
+                    value='0.17326943'
+
+                />
+
+                <button
+                    type="submit"
+                    class="
+                        flex
+                        justify-center
+                        align-center
+                        mt-8
+                        p-4
+                        bg-gradient-to-r
+                        from-green-400
+                        to-blue-500
+                        text-white
+                        rounded-md
+                        text-3xl
+                    "
+                >
+                    PREDIKSI SEKARANG
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-arrow-right ml-4"
+                    >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </form>
+        </main>
+        <section class="mt-8 h-full flex-auto rounded-lg md:mt-0 md:ml-8">
+            <div class="bg-white p-16 rounded-lg">
+                <h1 class="text-2xl mb-8">
+                    Prediksi Benign / DDoS 
+                </h1>
+                <h2 class="text-5xl font-bold">PREDIKSI {{ prediksi }}</h2>
+                {% if (prediksi) == 1 %}
+                    <h1>INI SERANGAN DDOS</h1>
+                {% endif %}
+            </div>
+          <div>
+
+            
+              
+          </div>
+        </section>
+    </body>
+</html>
